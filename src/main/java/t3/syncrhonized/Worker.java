@@ -1,18 +1,11 @@
 package t3.syncrhonized;
 
 /**
- * <p>
- *		Threads interlocking and the synchronized keyword:
- * </p>
+ * Here two threads are incrementing the count and final
+ * Count should be 200000 but instead it is less than that.
  * 
- * <p>
- * The full tutorial and the majority of the code is available at
- * https://www.udemy.com/java-multithreading/?dtcode=KmfAU1g20Sjj#/
- * </p>
- * 
- * <p>
- * @author kanastasov L1087591@live.tees.ac.uk December-2014
- * </p>
+ * How do you resolve it?
+ * Make the increment method synchronized.
  */
 
 public class Worker {
@@ -30,7 +23,7 @@ public class Worker {
     public void run() {
         Thread thread1 = new Thread(new Runnable() {
             public void run() {
-                for(int i = 0; i < 10000; i++) {
+                for(int i = 0; i < 100000; i++) {
                     increment();
                 }
             }
@@ -39,7 +32,7 @@ public class Worker {
         
         Thread thread2 = new Thread(new Runnable() {
             public void run() {
-                for(int i = 0; i < 10000; i++) {
+                for(int i = 0; i < 100000; i++) {
                     increment();
                 }
             }
