@@ -1,21 +1,10 @@
 package t1.startingThreads.implementsRunnable;
 
 /**
- * <p>
- * Runner is implementing the Runnbale interface and overrides the run method.
- * implementing the Runnable interface is the best practice for Multithreading
+ * Runner is implementing the Runnable interface and overrides the run method.
+ * Implementing the Runnable interface is the best practice for Multithreading
  * in Java. The start method needs to be invoked in the main to start the
  * threads separately.
- * </p>
- * 
- * <p>
- * The full tutorial and the majority of the code is available at
- * https://www.udemy.com/java-multithreading/?dtcode=KmfAU1g20Sjj#/
- * </p>
- * 
- * <p>
- * @author kanastasov L1087591@live.tees.ac.uk December-2014
- * </p>
  */
 class Runner implements Runnable {
 
@@ -33,7 +22,6 @@ class Runner implements Runnable {
 		}
 
 	}
-
 }
 
 public class Application {

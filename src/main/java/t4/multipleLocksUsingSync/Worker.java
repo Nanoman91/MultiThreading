@@ -1,19 +1,20 @@
 package t4.multipleLocksUsingSync;
 
-/** <p>
- * This is the fourth part of the advanced Java multi-threading tutorial. 
- * In this tutorial we can use multiple locks to speed up complex multi-threaded
- *  code, sometimes dramatically.
- * </p>
+/** 
+ * First Disable synchronized(lock1) and synchronized(lock2) and run MultiLockTest class. 
+ * Both the lists will not be full with 2000 items.
  * 
- * <p>
- * The full tutorial and the majority of the code is available at
- * https://www.udemy.com/java-multithreading/?dtcode=KmfAU1g20Sjj#/
- * </p>
+ * To resolve it we need to use synchronized but if we synchronize the stageOne()
+ * method and stageTwo() method then thread t1 and t2 both will try to 
+ * acquire the lock on Worker object which will cause the time taken will be
+ *  twice as long like 4 seconds. Try it.
  * 
- * <p>
- * @author kanastasov L1087591@live.tees.ac.uk December-2014
- * </p>
+ * But we want a mechanism where Thread t1 and t2 can not run stageOne() at the same time
+ *  but Thread t1 can run stageOne() and t2 can run stageTwo() at the same time
+ *   without waiting for each other. But that can not be done with one lock.
+ *   
+ * Hence we use multiple locks to speed up complex multi-threaded code.
+ * Now enable synchronized(lock1) and synchronized(lock2) and run MultiLockTest class.
  */
 import java.util.ArrayList;
 import java.util.List;
@@ -29,9 +30,9 @@ public class Worker {
 	private List<Integer> list1 = new ArrayList<Integer>();
 	private List<Integer> list2 = new ArrayList<Integer>();
 
+	//public synchronized void stageOne() { // can be done but takes twice the time for execution
 	public void stageOne() {
-
-		synchronized (lock1) {
+		//synchronized (lock1) {
 			try {
 				Thread.sleep(1);
 			} catch (InterruptedException e) {
@@ -40,13 +41,13 @@ public class Worker {
 			}
 
 			list1.add(random.nextInt(100));
-		}
+		//}
 
 	}
 
+	//public synchronized void stageTwo() { // can be done but takes twice the time for execution
 	public void stageTwo() {
-
-		synchronized (lock2) {
+		//synchronized (lock2) {
 			try {
 				Thread.sleep(1);
 			} catch (InterruptedException e) {
@@ -55,7 +56,7 @@ public class Worker {
 			}
 
 			list2.add(random.nextInt(100));
-		}
+		//}
 
 	}
 

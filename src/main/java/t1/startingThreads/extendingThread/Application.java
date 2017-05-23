@@ -1,19 +1,8 @@
 package t1.startingThreads.extendingThread;
 
 /**
- * <p>
  * Starting threads by extending the Thread class. The start method needs to be
  * invoked in the main to start the threads separately.
- * </p>
- * 
- * <p>
- * The full tutorial and the majority of the code is available at
- * https://www.udemy.com/java-multithreading/?dtcode=KmfAU1g20Sjj#/
- * </p>
- * 
- * <p>
- * @author kanastasov L1087591@live.tees.ac.uk December-2014
- * </p>
  */
 
 class Runner extends Thread {
@@ -31,7 +20,6 @@ class Runner extends Thread {
 			}
 		}
 	}
-
 }
 
 public class Application {
