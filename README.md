@@ -16,6 +16,14 @@ From Official JavaSE 8 docs:
   Additional methods are provided to determine if the task completed normally or was cancelled.
   Once a computation has completed, the computation cannot be cancelled.
   </p>
+  
+  
+  <b>class Executors:</b> Factory and utility methods for Executor, ExecutorService, 
+		 ScheduledExecutorService, ThreadFactory, and Callable classes defined in this package.
+	<b>newCachedThreadPool:</b> Creates a thread pool that creates new threads as needed,
+		 but will reuse previously constructed threads when they are available.
+	<b>interface ExecutorService:</b> An Executor that provides methods to manage termination and
+		 methods that can produce a Future for tracking progress of one or more asynchronous tasks.
 
 Contents of the Project:
 
