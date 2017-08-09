@@ -1,6 +1,23 @@
-# MultiThreading
+## MultiThreading
 
-Content of the Project:
+From Official JavaSE 8 docs: 
+
+<p> interface Callable: A task that returns a result and may throw an exception.
+  Just need to override call() method which Computes a result, or throws an exception if unable to do so.
+  The Callable interface is similar to Runnable, in that both are designed for classes
+  whose instances are potentially executed by another thread. A Runnable, however, 
+  does not return a result and cannot throw a checked exception. 
+ </p>
+ <p>
+  interface Future: A Future represents the result of an asynchronous computation. Methods are provided to check
+  if the computation is complete, to wait for its completion, and to retrieve the result of the
+  computation. The result can only be retrieved using method get when the computation has completed,
+  blocking if necessary until it is ready. Cancellation is performed by the cancel method.
+  Additional methods are provided to determine if the task completed normally or was cancelled.
+  Once a computation has completed, the computation cannot be cancelled.
+  </p>
+
+Contents of the Project:
 
 1- Java Multithreading: Starting Threads
 
