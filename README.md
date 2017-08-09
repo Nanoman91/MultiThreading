@@ -27,7 +27,7 @@ From Official JavaSE 8 docs:
 <b>interface ExecutorService:</b> An Executor that provides methods to manage termination and
 		 methods that can produce a Future for tracking progress of one or more asynchronous tasks.
 
-Contents of the Project:
+<b>Contents of the Project:</b>
 
 1- Java Multithreading: Starting Threads
 
