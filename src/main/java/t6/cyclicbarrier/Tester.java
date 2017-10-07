@@ -1,4 +1,4 @@
-package main.java;
+package t6.cyclicbarrier;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
