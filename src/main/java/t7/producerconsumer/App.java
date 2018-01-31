@@ -1,9 +1,12 @@
 package t7.producerconsumer;
 
-/** <p> Implementing the producer-consumer concurrency design pattern in Java using the ArrayBlockingQueue Java class. 
+/** 
+ * <p>
+ * Implementing the producer-consumer concurrency design pattern in Java using the ArrayBlockingQueue Java class. 
  * Producer-Consumer is the situation where one or more threads are producing data items and 
  * adding them to a shared data store of some kind while one or more other threads process
- * those items, removing them from the data store.</p>
+ * those items, removing them from the data store.
+ * </p>
  * 
  * <p>
  * The full tutorial and the majority of the code is available at
