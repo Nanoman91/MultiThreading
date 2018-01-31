@@ -1,4 +1,4 @@
 
 ## Output is below
 
-![alt text] (ProdOut.png)
+![alt text] (ProdOut.PNG)
